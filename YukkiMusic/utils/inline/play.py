@@ -31,7 +31,7 @@ selections = [
 ## After Edits with Timer Bar
 
 
-def stream_markup_timer(_, videoid, chat_id, played, current_time, total time):
+def stream_markup_timer(_, videoid, chat_id, played, current_time, total_time):
     bar = random.choice(selections)
     buttons = [
         [
