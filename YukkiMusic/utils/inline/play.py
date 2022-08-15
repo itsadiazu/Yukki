@@ -12,19 +12,19 @@ import random
 from pyrogram.types import InlineKeyboardButton
 
 selections = [
-    "▇▄▅",
-    "▁▃▇",
-    "▃▃▅",
-    "▃▄▂",
-    "▃▄▃",
-    "▃▇▅",
-    "▇▄▃",
-    "▁▃▅",
-    "▃▅▂",
-    "▇▅▂",
-    "▃▇▂",
-    "▅▄▇",
-    "▃▅▂",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
+    "----",
 ]
 
 
@@ -36,14 +36,14 @@ def stream_markup_timer(_, videoid, chat_id, played, current_time):
     buttons = [
         [
             InlineKeyboardButton(
-                       text="Join",
+                       text="📡Join",
                        url='https://t.me/LoveIsAslowPoision'),
             InlineKeyboardButton(
                 text=f"{bar} {current_time} {bar}",
                 callback_data="timer_checkup_markup",
             ),
             InlineKeyboardButton(
-                       text="⭐ Support ⭐",
+                       text="📡Join",
                        url='https://t.me/LoveIsAslowPoision')
         ],
         [
