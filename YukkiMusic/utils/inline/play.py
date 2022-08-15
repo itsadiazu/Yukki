@@ -35,10 +35,18 @@ def stream_markup_timer(_, videoid, chat_id, played, current_time):
     bar = random.choice(selections)
     buttons = [
         [
+                   InlineKeyboardButton(
+                       text="Join",
+                       url='https://t.me/LoveIsAslowPoision'), 
+        [
             InlineKeyboardButton(
                 text=f"{bar} {current_time} {bar}",
                 callback_data="timer_checkup_markup",
-            )
+            ), 
+        [
+                   InlineKeyboardButton(
+                       text="⭐ Support ⭐",
+                       url='https://t.me/LoveIsAslowPoision')
         ],
         [
             InlineKeyboardButton(
