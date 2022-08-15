@@ -62,6 +62,13 @@ def stream_markup_timer(_, videoid, chat_id, played, dur ):
         ],
         [
             InlineKeyboardButton(
+                       text="🖥Bot",
+                       url='https://t.me/JerryMusicBot'), 
+            InlineKeyboardButton(
+                text=f"{bar}",
+                callback_data="GetTimer",
+            ), 
+            InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             ), 
 
@@ -127,10 +134,6 @@ def telegram_markup(_, chat_id):
             InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             ),
-            InlineKeyboardButton(
-                text=f"{bar}",
-                callback_data="GetTimer",
-            )
         ],
     ]
     return buttons
