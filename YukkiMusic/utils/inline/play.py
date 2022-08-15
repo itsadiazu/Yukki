@@ -36,15 +36,17 @@ def stream_markup_timer(_, videoid, chat_id, played, dur ):
     buttons = [
         [
             InlineKeyboardButton(
-                       text="📡Join",
-                       url='https://t.me/LoveIsAslowPoision'),
+                text=f"{bar}",
+                callback_data="GetTimer",
+            ), 
             InlineKeyboardButton(
                 text=f"{played}",
                 callback_data="GetTimer",
             ),
             InlineKeyboardButton(
-                       text="📡Join",
-                       url='https://t.me/LoveIsAslowPoision')
+                text=f"{bar}",
+                callback_data="GetTimer",
+            ), 
         ],
         [
             InlineKeyboardButton(
@@ -52,22 +54,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur ):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=f"{dur}",
-                callback_data="GetTimer",
-            ),
-            InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
         ],
         [
-            InlineKeyboardButton(
-                       text="🖥Bot",
-                       url='https://t.me/JerryMusicBot'), 
-            InlineKeyboardButton(
-                text=f"{bar}",
-                callback_data="GetTimer",
-            ), 
             InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             ), 
