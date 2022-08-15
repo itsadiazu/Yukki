@@ -60,6 +60,9 @@ def stream_markup_timer(_, videoid, chat_id, played, dur ):
         ],
         [
             InlineKeyboardButton(
+                       text="📡Join",
+                       url='https://t.me/LoveIsAslowPoision'),
+            InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             ), 
 
