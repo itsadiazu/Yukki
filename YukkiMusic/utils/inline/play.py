@@ -31,7 +31,7 @@ selections = [
 ## After Edits with Timer Bar
 
 
-def stream_markup_timer(_, videoid, chat_id, played, current_time, total_time):
+def stream_markup_timer(_, videoid, chat_id, played, dur ):
     bar = random.choice(selections)
     buttons = [
         [
@@ -39,7 +39,7 @@ def stream_markup_timer(_, videoid, chat_id, played, current_time, total_time):
                        text="📡Join",
                        url='https://t.me/LoveIsAslowPoision'),
             InlineKeyboardButton(
-                text=f"{bar} {current_time} {bar}",
+                text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
             ),
             InlineKeyboardButton(
@@ -70,7 +70,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{bar} {current_time} {bar}",
+                text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
             )
         ],
